@@ -1,0 +1,19 @@
+<template name="profilePage">
+    <div class="row my-profile txt_center mrgn_top--25">
+        <h3 class="teamLabTwitter_subheading_h3_small--bold bg-info pad_all--20 mrgn_bottom--0"><i class="fa fa-user pad_right--5" aria-hidden="true"></i> {{myUserName}}</h3>
+        <div class="user-info bg-success clearfix pad_top--25">
+          <div class="col-md-4">
+            <p class="text-info follow-follower-tweets" id="getFollowings"><strong>{{followingList}}</strong></p>
+            <h6>Following</h6>
+          </div>
+          <div class="col-md-4">
+            <p class="text-info follow-follower-tweets" id="getFollowers"><strong>{{followerList}}</strong></p>
+            <h6>Follower</h6>
+          </div>
+          <div class="col-md-4">
+              <p class="text-info follow-follower-tweets" id="viewMyTweets"><strong>{{tweetsCounter}}</strong></p>
+              <h6>Tweets</h6>
+          </div>
+        </div>
+    </div>            
+</template>

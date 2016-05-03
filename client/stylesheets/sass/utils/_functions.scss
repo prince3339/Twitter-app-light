@@ -1,0 +1,29 @@
+/// Map deep get
+/// @author Hugo Giraudel
+/// @access public
+/// @param {Map} $map - Map
+/// @param {Arglist} $keys - Key chain
+/// @return {*} - Desired value
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+/// Get next breakpoint
+/// @author Bootstrap
+/// @access public
+@function breakpoint-next($name, $bp: $breakpoints, $bp-names: map-keys($bp)) {
+	$n: index($bp-names, $name);
+	@return if($n < length($bp-names), nth($bp-names, $n+1), null);
+}
+
+/// Min breakpoint
+/// @author Bootstrap
+/// @access public
+@function breakpoint-min($name, $bp: $breakpoints) {
+	$min: map-get($bp, $name);
+	@return if($min != 0, $min, null);
+}
+

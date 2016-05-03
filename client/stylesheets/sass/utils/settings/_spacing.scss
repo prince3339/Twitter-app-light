@@ -1,0 +1,54 @@
+/// @name spacing unit base
+/// @author Sabbir Ahmed
+$spacing-unit-base: 1rem !default;
+
+/// @name margin base
+/// @author Sabbir Ahmed
+$margin-base: $spacing-unit-base / 2 !default;
+
+$margin-5: $margin-base !default;
+$margin-10: $margin-base * 2 !default;
+$margin-15: $margin-base * 3 !default;
+$margin-20: $margin-base * 4 !default;
+$margin-25: $margin-base * 5 !default;
+$margin-30: $margin-base * 6 !default;
+$margin-35: $margin-base * 7 !default;
+$margin-40: $margin-base * 8 !default;
+$margin-45: $margin-base * 9 !default;
+$margin-50: $margin-base * 10 !default;
+$margin-55: $margin-base * 11 !default;
+$margin-60: $margin-base * 12 !default;
+$margin-65: $margin-base * 13 !default;
+$margin-70: $margin-base * 14 !default;
+$margin-75: $margin-base * 15 !default;
+$margin-80: $margin-base * 16 !default;
+$margin-85: $margin-base * 17 !default;
+$margin-90: $margin-base * 18 !default;
+$margin-95: $margin-base * 19 !default;
+$margin-100: $margin-base * 20 !default;
+
+/// @name padding base
+/// @author Sabbir Ahmed
+$padding-base: $spacing-unit-base /2 !default;
+
+$padding-5: $padding-base !default;
+$padding-10: $padding-base * 2 !default;
+$padding-15: $padding-base * 3 !default;
+$padding-20: $padding-base * 4 !default;
+$padding-25: $padding-base * 5 !default;
+$padding-30: $padding-base * 6 !default;
+$padding-35: $padding-base * 7 !default;
+$padding-40: $padding-base * 8 !default;
+$padding-45: $padding-base * 9 !default;
+$padding-50: $padding-base * 10 !default;
+$padding-55: $padding-base * 11 !default;
+$padding-60: $padding-base * 12 !default;
+$padding-65: $padding-base * 13 !default;
+$padding-70: $padding-base * 14 !default;
+$padding-75: $padding-base * 15 !default;
+$padding-80: $padding-base * 16 !default;
+$padding-85: $padding-base * 17 !default;
+$padding-90: $padding-base * 18 !default;
+$padding-95: $padding-base * 19 !default;
+$padding-100: $padding-base * 20 !default;
+

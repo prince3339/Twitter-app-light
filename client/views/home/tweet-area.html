@@ -1,0 +1,16 @@
+<!--tweet input area start-->
+<template name="tweetArea">
+    <div class="tweet-area bg-info mrgn_top--25">
+        <form class="form-horizontal pad_all--50" id="#tweet-area-form">
+          <div class="form-group">
+                <textarea placeholder="What are you doing?" id="tweetContent" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="form-group clearfix">
+                <div class="float--right">
+                    <span class="{{tweetCharClass}}  tweet-char-style pad_right--10">{{tweetCharCount}}</span>
+                    <button id="tweetPostBtn" type="submit" class="btn bttn bttn--sky-blue" {{tweetDisableBtn}}>Tweet</button>  
+                </div>
+          </div>
+        </form>
+    </div>      
+</template> <!--tweet input area end-->

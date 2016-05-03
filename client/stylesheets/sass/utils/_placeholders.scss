@@ -1,0 +1,56 @@
+/// placeholder
+
+/// box sizing border-box property
+%box_sizing--borderbox {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/// box sizing inherit property
+%box_sizing--inherit {
+	box-sizing: inherit;
+}
+
+/// Default margin for block elements
+/// @link http://csswizardry.com/2012/06/single-direction-margin-declarations/
+%vertical_rythm {
+	margin: 0 0 1.5rem 0;
+}
+
+/// default heading font & weight for h1-h6
+%heading_type{
+	font-family: $font-family-heading;
+	font-weight: $font-weight-heading;
+}
+
+/// transparent background
+%bg_transparent {
+	background: transparent;
+}
+
+/// clearfix
+%clearfix {
+	@include clearfix;    
+}
+
+/// @name margin_bottom_zero
+/// @author Kamal Sharif
+/// @access Public
+%margin_bottom_zero {
+    margin-bottom: 0;
+}
+
+/// @name border_radius_zero
+/// @author Kamal Sharif
+/// @access Public
+%border_radius_zero {
+    border-radius: 0;
+}
+
+/// @name border_radius_100
+/// @author Kamal Sharif
+/// @access Public
+%border_radius_100 {
+    border-radius: 100%;
+}
+

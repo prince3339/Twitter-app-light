@@ -1,0 +1,20 @@
+/// @name height
+/// @author Sabbir Ahmed
+/// @access public
+@mixin height($height) {
+    height: $height;
+}
+
+/// @name width
+/// @author Sabbir Ahmed
+/// @access public
+@mixin width($width) {
+    width: $width;
+}
+
+/// @name vertical-align
+/// @author Sabbir Ahmed
+/// @access public
+@mixin vertical-align($prop) {
+    vertical-align: $prop;
+}

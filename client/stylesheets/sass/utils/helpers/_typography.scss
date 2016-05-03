@@ -1,0 +1,144 @@
+// ================================ Utility =================================
+
+// utility classes are useful for quick hacks which require single specific property.
+// every corresponding class has an !important version associated with it for greater
+// flexibility. Use both type according to the needs.
+
+.txt {
+	&_left {
+		text-align: left;
+		
+		&--imp {
+			text-align: left !important;
+		}
+	}
+	
+	&_center {
+		text-align: center;
+		
+		&--imp {
+			text-align: center !important;
+		}
+	}
+	
+	&_right {
+		text-align: right;
+		
+		&--imp {
+			text-align: right !important;
+		}
+	}
+	
+	&_justify {
+		text-align: justify;
+		
+		&--imp {
+			text-align: justify!important;
+		}
+	}
+	
+	&_uppercase {
+		text-transform: uppercase;
+		
+		&--imp {
+			text-transform: uppercase !important;
+		}
+	}
+}
+
+// these font classes may become handy in emergency situation like
+// last minuite quick fixes
+
+.font {
+	&_weight {
+		&--300 {
+			font-weight: 300;
+			
+			&-imp {
+				font-weight: 300 !important;
+			}
+		}
+		
+		&--400 {
+			font-weight: 400;
+			
+			&-imp {
+				font-weight: 400 !important;
+			}
+		}
+		
+		&--600 {
+			font-weight: 600;
+			
+			&-imp {
+				font-weight: 600 !important;
+			}
+		}
+		
+		&--700 {
+			font-weight: 700;
+			
+			&-imp {
+				font-weight: 700 !important;
+			}
+		}
+		
+		&--800 {
+			font-weight: 800;
+			
+			&-imp {
+				font-weight: 800 !important;
+			}
+		}
+	}
+	
+	&_size {
+		&--10px {
+			font-size: 1rem;
+			
+			&-imp {
+				font-size: 1rem !important;
+			}
+		}
+		
+		&--12px {
+			font-size: 1.2rem;
+			
+			&-imp {
+				font-size: 1.2rem !important;
+			}
+		}
+		
+		&--14px {
+			font-size: 1.4rem;
+			
+			&-imp {
+				font-size: 1.4rem !important;
+			}
+		}
+		
+		&--16px {
+			font-size: 1.6rem;
+			
+			&-imp {
+				font-size: 1.6rem !important;
+			}
+		}
+		
+		&--18px {
+			font-size: 1.8rem;
+			
+			&-imp {
+				font-size: 1.8rem !important;
+			}
+		}
+		
+		&--20px {
+			font-size: 2rem;
+			
+			&-imp {
+				font-size: 2rem !important;
+			}
+		}
+	}
+}

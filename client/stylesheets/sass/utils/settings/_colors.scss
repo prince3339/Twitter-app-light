@@ -1,0 +1,138 @@
+/// @prop colors
+/// @author Sabbir Ahmed
+/// @access public
+$colors: (
+    'primary': (
+        'base': #f56363,
+        'dashboard-base': #dc7c53
+    ),
+    
+    'secondary': (
+        'base': #99f23a
+    ),
+    
+    'accent': (
+        'base': #ef7c52 
+    ),
+    
+    'foreground': (
+        'base': #333,
+        'sidebar': #fff,
+        'border': #ccc,
+        'textarea-border': #545454
+    ),
+    
+    'background': (
+        'base': #fff,
+        'medium-white': #fdfdfd,
+        'orange': #ef6b45,
+		'sidebar': #393E41,
+        'sidebar-submenu': #222427,
+        'divider': #dadada,
+        'divider-teamLabTwittermodal': #c0c0c0,
+        'cust-checkout': #f6f6f6,
+        'light-gray': #f6f6f6,
+        'medium-gray': #eeeeee,
+        'transparent': transparent,
+        'border': #ebebeb,
+        'hover': #dddddd,
+        'darkish-white' : #f8f8f8,
+        'material-red': #f56363,
+        'sky_blue': #2098D1
+    ),
+    
+    'calendar': (
+        'currday-bg': #fdf1ec, 
+        'pastday-bg': #f0f6f9, 
+        'futureday-bg': #fff,
+        'hover-bg': #f1f9f5,
+        'lunch-label': #5abc90,
+        'breakfast-label': #f18e6a,
+        'material-red': #f56363
+    ),
+    
+    'buttons': (
+        'save': #5abc90,
+        'cancel': #e9bc05,
+        'delete': #db644a,
+        'reset': #0083d0,
+        'back': #dca253,
+        'cal-today': #5b8eb2,
+        'cal-month': #5abc90,
+        'cal-agendaweek': #ecaa53,
+        'disabled': #c0c0c0,
+        'darkish-white' : #e4dddb,
+        'sky_blue': #2098D1
+        
+    ),
+    
+    'tags': (
+        'bg': #5abc90,
+        'color': #fff
+    ),
+    
+    'app-type': (
+        'base': #000,
+        'white': #ffffff,
+        'orange': #ef6b45,
+        'gray' : #949494,
+        'medium-gray' : #5a5959,
+        'facebook' : #3C579E,
+        'twitter' : #55ACEE,
+        'instagram' : #115587,
+        'pinterest' : #BD2026,
+        'dark-red' : #241c18,
+        'red-gray' : #826b60,
+        'darkish-white' : #e4dddb,
+        'material-red': #f56363,
+        'sky_blue': #2098D1,
+        'red': #FF0000
+        
+    ),
+    
+    'app-badge': (
+        'background': #ef6b45 
+    ),
+    
+    'app-button': (
+        'no-bg': transparent,
+        'base-bg': #ef6b45,
+        'base-colr': #fff,
+        'black-colr':#000,
+        'facebook-bg': #465892,
+        'material-red': #f56363,
+        'sky_blue': #2098D1
+    ),
+    
+    'border': (
+        'base-bg': #ef6b45,
+        'base-colr': #fff,
+        'black-colr':#000,
+        'facebook-bg': #465892,
+        'material-red': #f56363,
+        'base': #000,
+        'white': #ffffff,
+        'orange': #ef6b45,
+        'gray' : #949494,
+        'medium-gray' : #5a5959,
+        'facebook' : #3C579E,
+        'twitter' : #55ACEE,
+        'instagram' : #115587,
+        'pinterest' : #BD2026,
+        'dark-red' : #241c18,
+        'red-gray' : #826b60,
+        'darkish-white' : #e4dddb,
+        'sky_blue': #2098D1
+    )
+    
+) !default; 
+
+
+/// @prop colors
+/// @author Sabbir Ahmed
+/// @access public
+$colors-mix: (
+    'white-mix': #fff,
+    'black-mix': #000
+) !default; 
+

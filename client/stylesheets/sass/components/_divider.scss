@@ -1,0 +1,70 @@
+.divider {
+    &_bottom {
+        position: relative;
+        &:after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            
+            height: 1px;
+            width: 100%;
+            display: block;
+            
+            background-color:  map-deep-get($colors, "background", "divider");
+            
+            content: "";
+        }
+    }
+}
+
+
+%divider_teamLabTwitter_modal_pseudostyle {
+    position: absolute;
+    top: 10px;
+
+    display: block;
+    height: 1px;
+    width: 40%;
+
+    content: '';
+    background-color: map-deep-get($colors, "background", "divider-teamLabTwittermodal");
+}
+
+.divider {
+    &_teamLabTwitter_modal {
+        position: relative;
+        
+        @include type-style($font-family-base-app, 700, 1.4rem, $color: map-deep-get($colors, "app-type", "base")); 
+        
+        &:before {
+            @extend %divider_teamLabTwitter_modal_pseudostyle;
+            left: 0;
+        }
+        
+        &:after {
+            @extend %divider_teamLabTwitter_modal_pseudostyle;
+            right: 0;
+        }
+    }
+}
+
+.divider {
+    &_bottom-mobile-only {
+        @include respond-to(phablet){
+            position: relative;
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                height: 1px;
+                width: 100%;
+                display: block;
+
+                background-color:  map-deep-get($colors, "background", "divider");
+
+                content: "";
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+/// @prop container width
+/// @author Sabbir Ahmed
+/// @access public
+$container-widths: (
+	'desktop': 1250px,
+    'bootstrap-mobile': 1170px,
+	'tablet-landscape': 1100px,
+	'tablet-portrait': 850px,
+	'phablet': 480px,
+	'mobile': 365px
+) !default;

@@ -1,0 +1,39 @@
+<template name="signUpPage">
+    <div class="container">
+        <div class="row">
+           <div class="col-md-4 txt_center pad_top--50">
+                <h1 class="teamLabTwitter_heading pad_top--50">Welcome to TeamLab Twitter.</h1>
+            </div>
+            <div class="col-md-8">
+                <form  id="sign_up_form" class="form-width pad_top--50">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Full Name</label>
+                        <input type="text" minlength="4" maxlength="20" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input required type="text" minlength="4" maxlength="20" class="form-control" id="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input required type="email" maxlength="100" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input required type="password" minlength="4" maxlength="8" class="form-control" id="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Confirm Password</label>
+                        <input required type="password" minlength="4" maxlength="8" class="form-control" id="confirm_password" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group clearfix">
+                        <div class="float--right">
+                            <button type="submit" class="btn bttn bttn--sky-blue">signup</button>  
+                        </div>
+                        <p>Already have an account? click <a href="/login" class="" id="">here</a> to login.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</template>

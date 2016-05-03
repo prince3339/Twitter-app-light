@@ -1,0 +1,5 @@
+/// @name custom map configuration
+/// @link http://frontendgods.com/sass-mixins-with-default-parameters-using-maps/
+@mixin map-customize($defaults, $custom) {
+	$customized: map-merge($defaults, $custom); 
+}

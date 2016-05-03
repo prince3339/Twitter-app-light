@@ -1,0 +1,89 @@
+// 1.css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+
+* {
+	@extend %box_sizing--inherit; // 1
+
+	&:before {
+		@extend %box_sizing--inherit; // 1
+	}
+
+	&:after {
+		@extend %box_sizing--inherit; // 1
+	}
+}
+
+// 1. Ensure the page always fills at least the entire height of the viewport.
+
+// 2. Set default font family to sans-serif.
+
+// 3. Set root font size 10px by default and adjustable with browser font settings change.
+
+// 4. Remove Gray Highlight When Tapping Links in Mobile Safari
+
+// 5. Prevent iOS and IE text size adjust after device orientation change, without disabling user zoom.
+
+// 6. Fonts on OSX will look more consistent with other systems that do not render text using sub-pixel anti-aliasing.
+
+
+html {
+	position: relative;
+	
+	box-sizing: border-box;
+	min-height: 100%; //[1]
+	overflow-x: hidden;
+
+	font-family: sans-serif; // [2]
+	font-size: 0.625rem; // [3]
+	line-height: 2.4;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0); // [4]
+	-ms-text-size-adjust: 100%; // [5]
+	-webkit-text-size-adjust: 100%; // [5]
+	-moz-osx-font-smoothing: grayscale; // [6]
+	 -webkit-font-smoothing: antialiased; // [6]
+}
+
+body {
+    @include type-style();
+
+	background-color: map-deep-get($colors, "background", "base");
+}
+
+    //.body-bg{
+    //	background-image: url(/images/bg.jpg)
+    //}
+
+// Single-direction margin declarations
+// http://csswizardry.com/2012/06/single-direction-margin-declarations/
+
+address, article, aside, blockquote,
+canvas, dd, dl,
+fieldset, figcaption, figure, footer,
+form, h1, h2, h3,
+h4, h5, h6, header, hgroup,
+hr, main, nav, noscript,
+ol, output, p, pre,
+section, table, tfoot, ul,
+video, div {
+	@extend %vertical_rythm;
+}
+
+
+//Overriding selection bg and color
+::-moz-selection {
+	background-color: map-deep-get($colors, "background", "sky_blue");
+
+	color: map-deep-get($colors, "app-type", "white");
+}
+
+::selection {
+	background-color: map-deep-get($colors, "background", "sky_blue");
+
+	color: map-deep-get($colors, "app-type", "white");
+}
+
+
+//blaze root div
+#__blaze-root{
+	margin: 0;
+}

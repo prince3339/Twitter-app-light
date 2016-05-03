@@ -1,0 +1,33 @@
+//tweetArea
+.tweet-char-style{
+    @include type-style($font-family-base-app, 700, 1.4rem, $color: map-deep-get($colors, 'app-type', 'base'))
+}
+
+.tweet-area{
+    //background-color: #D9EDF7;
+}
+
+.error-tweet-char{
+    color: map-deep-get($colors, 'app-type', 'red');
+}
+
+.tweet-time{
+    font-size: 12px;
+}
+
+.delete-tweets{
+    margin-top: -1.5rem;
+    margin-right: -1rem;
+    
+    padding: 1rem;
+    
+    cursor: pointer;
+}
+
+.userName{
+    cursor: pointer;
+}
+
+.follow-follower-tweets{
+    cursor: pointer;
+}

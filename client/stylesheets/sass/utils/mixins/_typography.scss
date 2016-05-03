@@ -1,0 +1,59 @@
+// rem font sizing. fallback for legacy browsers and quarks
+/// @name font-size fallback
+/// @deprecated dropped support for IE8.
+
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+/// @name  set typography
+/// @param $family - font-family
+/// @param $weight - font-weight
+/// @param $size - font-size
+/// @param $color - font-color
+/// @author Sabbir Ahmed
+
+@mixin type-style($family: $font-family-base, $weight: 400, $size: $font-size-base, $color: map-deep-get($colors, "foreground", "base")) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+/// @name  font-weight-color
+/// @param $weight - font-weight
+/// @author Sabbir Ahmed
+
+@mixin font-weight-color($weight: 400, $color: map-deep-get($colors, "app-type", "sky_blue")) {
+    font-weight: $weight;
+    color: $color;
+}
+
+/// @name  font-weight-size
+/// @param $weight - font-weight
+/// @author Sabbir Ahmed
+
+@mixin font-weight-size($weight: 400, $size: $font-size-base) {
+    font-weight: $weight;
+    font-size: $size;
+}
+
+/// @name  font-weight-size-color
+/// @param $weight - font-weight
+/// @author Sabbir Ahmed
+
+@mixin font-weight-size-color($weight: 400, $size: $font-size-base, $color: map-deep-get($colors, "foreground", "base")) {
+    font-weight: $weight;
+    font-size: $size;
+    color: $color;
+}
+
+/// @name text ellipsis
+/// @author Sabbir Ahmed
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

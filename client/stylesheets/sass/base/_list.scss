@@ -1,0 +1,9 @@
+// 1. overriding weblit-padding-start: 40px
+
+ul {
+    padding: 0; // [1]
+}
+
+li {    
+    list-style: none;
+}

@@ -1,0 +1,176 @@
+/// @name modal_cross_magicnumb
+/// @author Kamal Sharid
+/// @access public
+@function modal_cross_magicnumb($numb: 2.5rem) {
+    @return $numb;
+}
+
+.teamLabTwitter_modal{
+    &_close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+
+        width: modal_cross_magicnumb();
+        height: modal_cross_magicnumb();
+
+        background-color: transparent;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        .lr {
+            z-index: 1051;
+
+            height: modal_cross_magicnumb();
+            width: 0.1rem;
+            margin-left: 1.2rem;
+
+            background-color: map-deep-get($colors, "app-type", "gray");
+
+
+            -o-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .rl {
+            z-index: 1052;
+
+            height: modal_cross_magicnumb();
+            width: 0.1rem;
+
+            background-color: map-deep-get($colors, "app-type", "gray");
+
+
+            -o-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    }
+
+    &_dialog {
+        @include respond-to("bootstrap-mobile") {
+            width: 440px;
+        }
+    }
+
+    &_rating-dialog {
+        @include respond-to("bootstrap-mobile") {
+            width: 575px;
+        }
+    }
+
+    &_content {
+        text-align: center;
+        border: none;
+        box-shadow: none;
+    }
+
+
+    &_heading {
+        @include type-style($font-family-base-app, 300, 2rem, $color: map-deep-get($colors, "app-type", "base"));
+
+        line-height: normal;
+    }
+
+
+
+    &_regcontainer {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+
+    &_formctrl {
+        @include type-style($font-family-base-app, 300, $color: map-deep-get($colors, "app-type", "base"));
+        box-shadow: none;
+        border: 1px solid #c0c0c0;
+        border-radius: 4px;
+    }
+
+    &_reglink {
+        @include type-style($font-family-base-app, 400, $color: map-deep-get($colors, "app-type", "base"));
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+
+	&--fix{
+		//This code is for modal issue fixing
+		overflow: hidden;
+		.modal{
+			overflow-x: hidden;
+    		overflow-y: auto;
+		}
+	}
+}
+
+// custom animation for bootstrap modal
+.modal.fade .modal-dialog {
+    margin-top: 0;
+
+	-webkit-transform: scale(0.1);
+	-moz-transform: scale(0.1);
+	-ms-transform: scale(0.1);
+	transform: scale(0.1);
+	top: -16px;
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.modal.fade.in .modal-dialog {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-webkit-transform: translate3d(0, 100px, 0);
+	transform: translate3d(0, 100px, 0);
+	opacity: 1;
+}
+
+//modal background
+.modal-backdrop{
+    margin-bottom: 0;
+}
+
+//override bootstrap default textarea style 
+textarea{
+    &.teamLabTwitter-textarea{
+        margin: 0 auto;
+
+        height: 15rem;
+        
+        -webkit-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        -ms-transition: all 0.4s;
+        transition: all 0.4s;
+        
+        &:focus{
+            margin-bottom: 4.5rem;
+            
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+    }
+}
+

@@ -1,0 +1,14 @@
+.form-width{
+    margin: 0 auto;
+    
+    width: 60%;
+    
+    @include respond-to(phablet){
+        width: 80%;
+    }
+    
+}
+
+.click_here{
+  cursor: pointer;
+}

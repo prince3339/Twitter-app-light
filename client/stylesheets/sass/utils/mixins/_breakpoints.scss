@@ -1,0 +1,39 @@
+/// @name sassy breakpoints
+/// @author Hugo Giraudel
+/// @link http://www.sitepoint.com/managing-responsive-breakpoints-sass/
+/// @content properties upon whoom the breakpoints apply
+
+@mixin respond-to($name) {
+	// if the key exists in the map
+	@if map-has-key($breakpoints, $name) {
+		//prints a media query based on the value
+		@media #{inspect(map-get($breakpoints, $name))} {
+			@content;    
+		}
+	}
+	
+    // if the key does not exist in the map
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+	}	
+}
+
+/// @name taget retina
+/// @author Sabbir Ahmed
+/// @link https://css-tricks.com/snippets/css/retina-display-media-query/
+/// @content properties upon whoom the retina breakpoints apply
+
+@mixin retina {
+	//future proof script
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (   min--moz-device-pixel-ratio: 2),
+	only screen and (     -o-min-device-pixel-ratio: 2/1),
+	only screen and (        min-device-pixel-ratio: 2),
+	only screen and (                min-resolution: 192dpi),
+	only screen and (                min-resolution: 2dppx) { 
+		@content;
+
+	}
+}

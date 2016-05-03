@@ -1,0 +1,129 @@
+%teamLabTwitter_btn_hover_color {
+    color: map-deep-get($colors, "app-button", "base-colr");
+    
+    outline: 0;
+}
+
+.bttn {
+    padding: 0.5em 1em;
+    
+    border-radius: 3px;
+    
+    @include type-style($font-family-base-app, 300, 1.6rem, $color: map-deep-get($colors, "app-button", "base-colr"));
+    text-align: center;
+    
+    
+    -ms-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    -o-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    -moz-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    
+    
+    &--material-red{        
+        background-color: map-deep-get($colors, 'background', 'material-red');
+        border: none;
+        
+        &:hover {
+            @extend %teamLabTwitter_btn_hover_color;
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "material-red"), 'black-mix', 90%);
+        }
+        
+        &:active {
+            @extend %teamLabTwitter_btn_hover_color;
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "material-red"), 'black-mix', 90%);
+        }
+        
+        &:focus {
+            @extend %teamLabTwitter_btn_hover_color;
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "material-red"), 'black-mix', 90%);
+        }
+        
+    }
+    
+    &--sky-blue{        
+        background-color: map-deep-get($colors, 'background', 'sky_blue');
+        border: none;
+        
+        &:hover {
+            @extend %teamLabTwitter_btn_hover_color;
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "sky_blue"), 'black-mix', 90%);
+        }
+        
+        &:active {
+            @extend %teamLabTwitter_btn_hover_color;
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "sky_blue"), 'black-mix', 90%);
+        }
+        
+        &:focus {
+            @extend %teamLabTwitter_btn_hover_color;
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "sky_blue"), 'black-mix', 90%);
+        }
+        
+    }
+    
+    &--facebook {
+        background-color: map-deep-get($colors, "app-button", "facebook-bg"); 
+        border: none;
+        
+        &:hover {
+            @extend %teamLabTwitter_btn_hover_color;
+
+            @include mix-bg( map-deep-get($colors, "app-button", "facebook-bg"), 'black-mix', 90%);
+        }
+
+        &:active {
+            @extend %teamLabTwitter_btn_hover_color;
+
+            @include mix-bg( map-deep-get($colors, "app-button", "facebook-bg"), 'black-mix', 90%);
+        }
+
+        &:focus {
+            @extend %teamLabTwitter_btn_hover_color;
+
+            @include mix-bg( map-deep-get($colors, "app-button", "facebook-bg"), 'black-mix', 90%);
+        }
+    }
+    
+    &--form_edit_cancel {
+        padding: 0.6em 1em;
+        
+        @include type-style($font-family-base-app, 300, 1.6rem, $color: map-deep-get($colors, "app-button", "material-red"));
+        
+        background-color: map-deep-get($colors, "app-button", "base-colr"); 
+        border: 1px solid map-deep-get($colors, "app-button", "material-red"); 
+        
+        &:hover {
+            @extend %teamLabTwitter_btn_hover_color;
+
+            @include mix-bg( map-deep-get($colors, "app-button", "material-red"), 'black-mix', 90%);
+        }
+
+        &:active {
+            
+            @include mix-bg( map-deep-get($colors, "app-button", "material-red"), 'black-mix', 90%);
+        }
+
+        &:focus {
+            @include mix-bg( map-deep-get($colors, "app-button", "material-red"), 'black-mix', 90%);
+        }
+    }
+    
+    
+    &_medium {
+        padding: 0.4em 1em;
+    }
+	
+	&--tour {
+        padding: 1em 1em;
+    }
+    &--subscribe {
+        padding: 1.2em 4em
+    }
+}

@@ -1,0 +1,10 @@
+<template name="recommendedUsers">
+    <div class="recommended-users pad_top--20">
+        <div class="recommend-users">  
+          <h3 class="teamLabTwitter_subheading_h3_small">Recommended users to follow:</h3>
+          {{#each displayRecommendUsers}}
+            <button type="button" class="btn btn-default" id="followRecUser">Follow @<span id="getUserName">{{this.username}}</span></button>
+          {{/each}}
+        </div>      
+    </div>
+</template>

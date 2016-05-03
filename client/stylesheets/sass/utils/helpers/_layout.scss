@@ -1,0 +1,195 @@
+.overflow--hidden {
+    overflow: hidden; 
+	
+	&--imp {
+		overflow: hidden !important;
+	}
+}
+
+.hide {
+    display: none;
+	
+	&--imp {
+		display: none !important;
+	}
+}
+
+
+.show {
+    display: block;
+	
+	&--imp {
+		display: block !important;
+	}
+}
+
+.visible {
+	visibility: visible;
+	
+	&--imp {
+		visibility: visible!important;
+	}
+}
+
+.not_visible {
+	visibility: hidden;
+	
+	&--imp {
+		visibility: hidden !important;
+	}
+}
+
+.block {
+    display: block;
+	
+	&--imp {
+		display: block !important;
+	}
+}
+
+
+.inline_block {
+	display: inline-block;
+	
+	&--imp {
+		display: inline-block !important;
+	}
+}
+
+.vert_align {
+    &--top {
+        @include vertical-align(top);
+        
+        &-imp {
+            @include vertical-align(top !important);
+        }
+    }
+    
+    &--middle {
+        @include vertical-align(middle);
+        
+        &-imp {
+            @include vertical-align(middle !important);
+        }
+    } 
+    
+    &--bottom {
+        @include vertical-align(bottom);
+        
+        &-imp {
+            @include vertical-align(bottom !important);
+        }
+    }
+    
+    &--baseline {
+        @include vertical-align(baseline);
+        
+        &-imp {
+            @include vertical-align(baseline !important);
+        }
+    }
+}
+
+.opacity_show {
+	opacity: 1;
+	
+	&--imp{
+		opacity: 1 !important;
+	}
+}
+
+.opacity_hide {
+	opacity: 0;
+	
+	&--imp {
+		opacity: 0 !important;
+	}
+}
+//width & height helper classes
+
+.height--100 {
+    height: 100%;
+	
+    &--imp {
+        height: 100% !important;  
+    }
+}
+
+.height--vh {
+    height: 100vh;
+	
+    &--imp {
+        height: 100vh !important;  
+    }
+}
+
+.width--100 {
+    width: 100%;
+	
+    &--imp {
+        width: 100% !important;
+    }
+}
+
+// to make text ellipse 
+
+.ellipsis {
+	@include ellipsis;
+}
+
+// to make inline elements to behave like block level elements with vertical rythm
+
+.vertical_rythm--block {
+    display: block;
+    @extend %vertical_rythm;
+}
+
+
+// Following classes don't have corresponding important version. They will be added 
+// as need arises.
+
+.position--relative {
+	position: relative;
+}
+
+.float--right {
+    float: right;
+}
+
+.float--left {
+    float: left;
+}
+
+//classes for making element center
+
+.center {
+	&_all {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		
+		transform: translate(-50%, -50%);
+	}
+	
+	&_vert {
+		position: absolute;
+		top: 50%;
+		
+		transform: translateY(-50%);
+	}
+	
+	&_hori {
+		position: absolute;
+		left: 50%;
+		
+		transform: translateX(-50%); 
+	}
+}
+
+//clearfix
+
+.clearfix{
+	@include clearfix;
+}
+
+

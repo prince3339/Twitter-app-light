@@ -1,0 +1,21 @@
+a {
+   @include font-weight-color(700);
+    
+    text-decoration: none;
+    
+    transition: color 0.2s linear 0.1s;
+    
+    &:hover {
+        @include mix-color( map-deep-get($colors, "app-type", "sky_blue"), 'black-mix', 5%);
+        
+        transition: color 0.2s linear 0.1s;
+    }
+    
+    &:active {
+        @include mix-color( map-deep-get($colors, "app-type", "sky_blue"), 'black-mix', 10%);
+    }
+    
+    &:focus {
+        outline: 0;
+    }
+}

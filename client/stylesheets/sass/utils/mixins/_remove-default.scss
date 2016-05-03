@@ -1,0 +1,203 @@
+/// @name remove_td--border-top
+/// @author Sabbir Ahmed
+/// @access Public
+
+@mixin remove_th--border-bottom() {
+    .table {
+        > thead {
+            > tr {
+                > th {
+                    border: none;
+                    
+                    @include type-style($font-family-base-app, 600, 1.4rem, $color: map-deep-get($colors, "app-type", "base"));
+                }
+            }
+        }
+    }
+}
+
+/// @name remove_td--border-top
+/// @author Sabbir Ahmed
+/// @access Public
+
+@mixin remove_td--border-top() {
+    .table {
+        > tbody {
+            > tr {
+                > td {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin th_customised(){
+    .table {
+        > thead {
+            > tr {
+                > th {
+                    padding-left: 0;
+                    padding-right: 0;
+                    
+                    @include type-style($font-family-base-app, 600, 1.4rem, $color: map-deep-get($colors, "app-type", "base"));
+                    
+                }
+            }
+        }
+    }    
+}
+
+@mixin td_customised(){
+    .table {
+        > tbody {
+            > tr {
+                
+                @include respond-to(phablet){
+                    margin-bottom: 2rem;
+                    
+                    display: block;
+                    
+                    padding-bottom: 1rem;
+                    
+                    border-bottom: 1px solid map-deep-get($colors, "background", "border");
+                    
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                }
+                
+                > td {
+                    padding-left: 0;
+                    padding-right: 0;
+                    
+                    @include respond-to(phablet){
+                        display: block;
+                        
+                        .mrgin_botton-mobile-only--0{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+@mixin order_customised_table(){
+
+    table {
+        margin:0;
+        
+        width: 100%;
+        
+        padding:0;
+        
+        //border: 1px solid #ccc;
+        border-collapse: collapse;
+        border-spacing: 0;
+        
+        @include respond-to("tab-small"){
+            border: none;
+        }
+        
+                
+        > thead {
+            @include respond-to("tab-small") {
+                display: none;
+            }
+            
+            > tr {
+                > th {
+                    background: map-deep-get($colors, "background", "medium-gray");
+                    
+                    border-bottom: 0;
+                    
+                    padding: 1.8rem;
+                    
+                    @include type-style($font-family-base-app, 600, 1.4rem, $color: map-deep-get($colors, "app-type", "base"));
+                }
+            }
+        }
+        
+        > tbody {
+            > tr {
+                
+                margin-bottom: 10px;
+                
+                //border: 1px solid #ddd;
+                
+                padding: 5px;  
+                
+                @include respond-to("tab-small"){
+                    display: block;
+                }
+                
+                &:after{
+                    @include respond-to("tab-small") {
+                        
+                        display: table;
+                        
+                        content: "";
+                        clear: both;
+                    }    
+                }
+                
+                &:before{
+                    @include respond-to("tab-small"){
+                        display: block;
+                        
+                        border-bottom: 1px solid #ddd;
+                    } 
+                }
+                
+                > td {
+                    
+                    padding: 1.5rem;
+                    
+                    @include type-style($font-family-base-app, 300, 1.4rem, $color: map-deep-get($colors, "app-type", "base"));
+                    
+                    @include respond-to("tab-small") {
+                        width: 100%;
+                        display: block;
+                        box-sizing: border-box;
+                        border-bottom: none;
+
+                        float: left;
+
+                        clear: left;
+
+                        text-align: right;
+                        font-size: 13px;    
+                    }
+                    
+                    span{
+                        display: inline-block;
+                        
+                        //padding-bottom: 0.5rem;
+                    } 
+                
+                    &:last-child{
+                        @include respond-to("tab-small") {
+                            border-bottom: 1px solid #ddd;
+                        }   
+                    }
+                    
+                    &:before{
+                        @include respond-to("tab-small") {
+                            float: left;
+                            
+                            text-transform: uppercase;
+                            font-weight: bold;
+                            
+                            content: attr(data-label);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    
+}

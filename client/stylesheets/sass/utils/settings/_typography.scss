@@ -1,0 +1,62 @@
+
+
+/// @name font-family-avenir-medium
+/// @author Sabbir Ahmed
+$font-family-avenir-medium: 'AvenirNextLTProMedium', 'Arial', sans-serif !default;
+
+/// @name font-family-avenir-regular
+/// @author Sabbir Ahmed
+$font-family-avenir-regular: 'AvenirNextLTProRegular', 'Arial', sans-serif !default;
+
+/// @name font-family-avenir-light
+/// @author Sabbir Ahmed
+$font-family-avenir-light: 'AvenirNextLTProLight', 'Arial', sans-serif !default;
+
+/// @name font-family-avenir-roman
+/// @author Sabbir Ahmed
+$font-family-avenir-roman: 'AvenirRoman', 'Arial', sans-serif !default;
+
+/// @name font-family-sans-serif
+/// @author Sabbir Ahmed
+$font-family-sans-serif: 'Lato', 'Arial', sans-serif !default;
+
+/// @name font-family-sans-serif-customerapp
+/// @author Sabbir Ahmed
+$font-family-sans-serif-app: 'Open Sans', 'Arial', sans-serif !default;
+
+/// @name font-family-serif
+/// @author Sabbir Ahmed
+$font-family-serif: 'Lora', 'Times New Roman', serif !default;
+
+/// @name font-family-base
+/// @author Kamal Sharif
+$font-family-base: $font-family-sans-serif-app !default;
+
+/// @name font-family-base-app
+/// @author Sabbir Ahmed
+$font-family-base-app: $font-family-avenir-medium !default;
+
+/// @name font-family-base-app
+/// @author Sabbir Ahmed
+$font-family-heading: $font-family-sans-serif-app !default;
+
+/// @name font-size-base
+/// @author Sabbir Ahmed
+$font-size-base: 1.6rem !default;
+
+$font-size-h1: ($font-size-base * 2.25) !default; //3.6rem
+$font-size-h2: ($font-size-base * 1.875) !default; // 3rem
+$font-size-h3: ($font-size-base * 1.5) !default; //2.4rem
+$font-size-h4: ($font-size-base * 1.25) !default; //2rem
+$font-size-h5: ($font-size-base * 1.125) !default; //1.8rem
+$font-size-h6: $font-size-base !default; //1.6rem
+
+$font-weight-900: 900 !default;
+$font-weight-700: 700 !default;
+$font-weight-600: 600 !default;
+$font-weight-400: 400 !default;
+$font-weight-300: 300 !default;
+
+/// @name font-weight-heading
+/// @author Sabbir Ahmed
+$font-weight-heading: $font-weight-700 !default;

@@ -1,0 +1,43 @@
+.text-input-custom{
+    height: 4.2rem;
+
+    border-radius: 3px;
+
+    &:focus{
+        box-shadow: none;
+
+        border:1px solid map-deep-get($colors, "border", "sky_blue");
+    }
+}
+
+.textarea-custom{
+    border-radius: 3px;
+    resize: none;
+
+    &:focus{
+        box-shadow: none;
+
+        border:1px solid map-deep-get($colors, "border", "material-red");
+    }
+}
+
+.file-input-custom{
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+    @include type-style($font-family-base-app, 300, 1.4rem, $color: map-deep-get($colors, 'app-type', 'base')); 
+    text-align: center;
+    line-height: 2.5rem;
+    
+    width: 100%;
+    height: 100%;
+    background: map-deep-get($colors, "background", "base");
+
+    cursor: pointer;
+    
+    .fa-upload{
+        color: map-deep-get($colors, "app-type", "material-red");
+        font-size: 1.8rem;
+    }
+}

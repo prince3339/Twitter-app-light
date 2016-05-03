@@ -1,0 +1,80 @@
+<template name="followerPeopleList">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="tweets-container">
+                   <h3 class="teamLabTwitter_subheading_h3 bg-info pad_all--10 mrgn_top--25"><strong>{{viewingUserName}}</strong> is followed by <strong>{{followerListCount}}</strong> people</h3>
+                    {{#each followerList}}
+                       <div class="bold_border_left single-tweets clearfix">
+                           {{#if toggleFollowBtn this.followerList}}
+                               {{#each toggleFollowBtn this.followerList}}
+                                    {{#if this.followerList}}
+                                        <span id="cancelFollowingModalOpen" class="delete-tweets pull-right">
+                                            <i class="fa fa-cog" aria-hidden="true"><span class="pad_left--5">Following</span></i>
+                                        </span>
+                                        <div class="modal fade" id="cancel-following-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog teamLabTwitter_modal_dialog" role="document">
+                                                <div class="modal-content teamLabTwitter_modal_content">
+                                                    <div class="teamLabTwitter_modal_close" data-dismiss="modal">
+                                                        <div class="lr">
+                                                            <div class="rl">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="teamLabTwitter_body pad_all--50">
+                                                        <h2 class="teamLabTwitter_modal_heading mrgn_bottom--40">Are you sure you want to unfollow this user?</h2>
+
+                                                        <button id="cancelFollowing" type="submit" class="btn bttn bttn--sky-blue pad_hori--30-imp mrgn_right--20">Ok</button> 
+                                                        <button class="btn bttn bttn--material-red" data-dismiss="modal">Cancel</button> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>  
+                                    {{/if}}
+                                        {{else}}
+                                           <span id="openFollowingModalOpen" class="delete-tweets pull-right">
+                                                <i class="fa fa-user-plus" aria-hidden="true"><span class="pad_left--5">Follow</span></i>
+                                            </span>
+                                            <div class="modal fade" id="open-following-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                                <div class="modal-dialog teamLabTwitter_modal_dialog" role="document">
+                                                    <div class="modal-content teamLabTwitter_modal_content">
+                                                        <div class="teamLabTwitter_modal_close" data-dismiss="modal">
+                                                            <div class="lr">
+                                                                <div class="rl">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="teamLabTwitter_body pad_all--50">
+                                                            <h2 class="teamLabTwitter_modal_heading mrgn_bottom--40">Are you sure you want to follow this user?</h2>
+
+                                                            <button id="followUser" type="submit" class="btn bttn bttn--sky-blue pad_hori--30-imp mrgn_right--20">Ok</button> 
+                                                            <button class="btn bttn bttn--material-red" data-dismiss="modal">Cancel</button> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                {{/each}}
+                                
+                           {{/if}}
+                            <h4 class="userName" id="goUserProfile">@{{this.followerList}}: </h4>
+                            {{#if getFollowerUserTweet this.followerList}}
+                                {{#each getFollowerUserTweet this.followerList}}
+                                   {{#if this.message}}
+                                        <p>{{#autolink}} {{this.message}} {{/autolink}}</p>
+                                        <span class="tweet-time"><strong>Tweeted on: </strong>{{this.timestamp}}</span>     
+                                   {{/if}}
+
+                                   {{else}}
+                                    <p class="text-danger"><strong>No tweets</strong></p> 
+                                {{/each}}
+                            {{/if}}    
+                        </div>
+                    {{/each}} 
+                </div>    
+            </div>
+            <div class="col-md-4">
+                {{> profilePage}}
+            </div>
+        </div>
+    </div>        
+</template>

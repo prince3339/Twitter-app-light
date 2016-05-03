@@ -1,0 +1,81 @@
+.teamLabTwitter{
+    &_heading{
+        @include type-style($font-family-base-app, 300, 3.6rem, $color: map-deep-get($colors, "app-type", "base"));
+        
+        &--white{
+            @include type-style($font-family-base-app, 300, 3.6rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+        
+        &--bold{
+            @include type-style($font-family-base-app, 400, 3.6rem, $color: map-deep-get($colors, "app-type", "base"));    
+        }
+        
+        &--bold-white{
+            @include type-style($font-family-base-app, 400, 3.6rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+    }
+    
+    &_subheading{
+        @include type-style($font-family-base-app, 300, 2.4rem, $color: map-deep-get($colors, "app-type", "base"));
+        
+        &--white{
+             @include type-style($font-family-base-app, 300, 2.4rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+        
+        &--bold{
+             @include type-style($font-family-base-app, 400, 2.4rem, $color: map-deep-get($colors, "app-type", "base"));    
+        }
+        
+        &--bold-white{
+             @include type-style($font-family-base-app, 400, 2.4rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+    }
+    
+    &_subheading_h3{
+        @include type-style($font-family-avenir-light, 300, 2.6rem, $color: map-deep-get($colors, "app-type", "base"));
+        
+        &--bold{
+            @include type-style($font-family-avenir-light, 400, 2.6rem, $color: map-deep-get($colors, "app-type", "base"));    
+        }
+        
+        &--white{
+            @include type-style($font-family-avenir-light, 300, 2.6rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+        
+        &--bold-white{
+            @include type-style($font-family-avenir-light, 400, 2.6rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+    }
+    
+    &_subheading_h3_small{
+        @include type-style($font-family-base-app, 300, 1.8rem, $color: map-deep-get($colors, "app-type", "base"));
+        
+        &--bold{
+            @include type-style($font-family-base-app, 400, 1.8rem, $color: map-deep-get($colors, "app-type", "base"));    
+        }
+        
+        &--white{
+            @include type-style($font-family-base-app, 300, 1.8rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+        
+        &--bold-white{
+            @include type-style($font-family-base-app, 400, 1.8rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+    }
+    
+    &_form_label{
+        @include type-style($font-family-base-app, 300, 1.4rem, $color: map-deep-get($colors, "app-type", "base"));
+        
+        &--bold{
+            @include type-style($font-family-base-app, 400, 1.4rem, $color: map-deep-get($colors, "app-type", "base"));    
+        }
+        
+        &--white{
+            @include type-style($font-family-base-app, 300, 1.4rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }
+        
+        &--bold-white{
+            @include type-style($font-family-base-app, 400, 1.4rem, $color: map-deep-get($colors, "app-type", "white"));    
+        }    
+    }
+}

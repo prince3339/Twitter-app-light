@@ -1,0 +1,36 @@
+<template name="displayTweets">
+    <div class="tweets-container">
+        {{#each showTweets}}
+          <div class="bold_border_left single-tweets clearfix">
+            {{#if deleteTweetBtn this.user}}
+              <span id="deleteTweetsModal" class="delete-tweets pull-right">
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              </span>
+              
+              <div class="modal fade" id="delete-tweet-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog teamLabTwitter_modal_dialog" role="document">
+                    <div class="modal-content teamLabTwitter_modal_content">
+                        <div class="teamLabTwitter_modal_close" data-dismiss="modal">
+                            <div class="lr">
+                                <div class="rl">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamLabTwitter_body pad_all--50">
+                            <h2 class="teamLabTwitter_modal_heading mrgn_bottom--40">Are you sure you want to delete this tweet? There is NO undo!</h2>
+
+                            <button id="deleteOwnTweet" type="submit" class="btn bttn bttn--sky-blue pad_hori--30-imp mrgn_right--20">Ok</button> 
+                            <button class="btn bttn bttn--material-red" data-dismiss="modal">Cancel</button> 
+                        </div>
+                    </div>
+                </div>
+              </div>
+              
+            {{/if}}
+            <h4 class="userName" id="goUserProfile">@{{this.user}}: </h4>
+            <p>{{#autolink}} {{this.message}} {{/autolink}}</p>
+            <span class="tweet-time"><strong>Tweeted on: </strong>{{this.timestamp}}</span>  
+          </div>
+        {{/each}}
+    </div>
+</template>

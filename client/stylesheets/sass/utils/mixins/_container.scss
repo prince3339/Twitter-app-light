@@ -1,0 +1,21 @@
+/// @name making container
+/// @link https://github.com/twbs/bootstrap/blob/v4-dev/scss/mixins/_grid.scss
+@mixin make-container($spacing: $spacing-unit-base) {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left:  ($spacing * 2);
+	padding-right: ($spacing * 2);
+	@include clearfix();
+}
+
+
+/// @name dynamically set container on breakpoints
+/// @author Bootstrap
+/// @access public
+@mixin make-container-max-widths($max-widths: $container-widths) {
+	@each $breakpoint, $container-max-width in $max-widths {
+		@include respond-to($breakpoint) {
+			max-width: $container-max-width;
+		}
+	}
+}

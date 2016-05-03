@@ -1,0 +1,79 @@
+
+.nav {
+    > li {
+        > a {
+            &:hover {
+                background: none; // remove hover style from nav link
+            }
+        }
+    }  
+}
+
+
+// remove margin bottom because it conflicts with bootstrap clearfix
+.remove_mrgn--bottom {
+    margin-bottom: 0;
+    
+    address, article, aside, blockquote,
+    canvas, dd, dl,
+    fieldset, figcaption, figure, footer,
+    form, h1, h2, h3,
+    h4, h5, h6, header, hgroup,
+    hr, main, nav, noscript,
+    ol, output, p, pre,
+    section, table, tfoot, ul,
+    video, div {
+        margin-bottom: 0;
+    }
+}
+
+// remove default select2 border radius for  dashboard 
+.dbd {
+    &_wrapper {
+        &--page {
+            .select2-container--default {
+                .select2-selection--single {
+                    height: 34px;
+                    @extend %border_radius_zero;
+                }
+                
+                .select2-selection--multiple {
+                    height: 34px;
+                    @extend %border_radius_zero;
+                    
+                    .select2-selection__choice {
+                        @extend %border_radius_zero;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// making default border radius 100% from x-editable table
+.editable-buttons {
+    .btn {
+        @extend %border_radius_100;
+    }
+    
+    .btn-sm {
+        @extend %border_radius_100;
+    }
+    
+    .btn-group-sm {
+        > .btn {
+            @extend %border_radius_100;
+        }
+    }
+}
+
+// making default border radius from x-editable table
+.editable-input {
+    .input-sm {
+        @extend %border_radius_zero;
+    }
+    
+    .form-control {
+        @extend %border_radius_zero;;
+    }
+}

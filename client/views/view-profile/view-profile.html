@@ -1,0 +1,43 @@
+<template name="viewProfilePage">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="tweets-container">
+                    {{#if viewUsersTweets}}
+                        {{#each viewUsersTweets}}
+                          
+<!--
+                          {{#if this.message}}
+                              <div class="bold_border_left single-tweets clearfix">
+                                <h4 class="userName" id="goUserProfile">@{{this.user}}: </h4>
+                                <p>{{#autolink}} {{this.message}} {{/autolink}}</p>
+                                <span class="tweet-time"><strong>Tweeted on: </strong>{{this.timestamp}}</span>  
+                              </div>
+                          {{/if}}
+-->
+                          
+                           {{#if this.message}}
+                                <div class="bold_border_left single-tweets clearfix">
+                                    <h4 class="userName" id="goUserProfile">@{{this.user}}: </h4>
+                                    <p>{{#autolink}} {{this.message}} {{/autolink}}</p>
+                                    <span class="tweet-time"><strong>Tweeted on: </strong>{{this.timestamp}}</span>  
+                                </div>  
+                           {{/if}}
+
+                               {{else}}
+                                <h3 class="teamLabTwitter_subheading_h3 bg-danger pad_all--10 mrgn_top--25 txt_center">
+                                    No tweets
+                                </h3> 
+
+                          
+                        {{/each}}
+                    {{/if}}
+                    
+                </div>    
+            </div>
+            <div class="col-md-4">
+<!--                {{> profilePage}}    -->
+            </div>
+        </div>
+    </div>        
+</template>

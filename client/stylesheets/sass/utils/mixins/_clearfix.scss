@@ -1,0 +1,14 @@
+/// @name clearfix mixin
+/// clears the float after the element
+@mixin clearfix {
+  &:before {
+    display: table;
+    content: "";
+  }
+
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
