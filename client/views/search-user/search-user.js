@@ -123,7 +123,7 @@ Template.searchUser.helpers({
     'toggleFollowBtn': function(checkUser) {
 
        var checkUser = userRelationship.find({
-           limit: 1
+//           limit: 1
        }).fetch().filter(function(val){
             return val.followingList == checkUser;
         });

@@ -5,6 +5,15 @@ Meteor.publish('all_users', function() {
   });
 });
 
+//publish all users except logged iin user for client
+//Meteor.publish('all_usersExceptLoggedINuser', function() {
+//  return Meteor.users.find({
+//    _id: { $nin: [ Meteor.user()._id ] } 
+//  }, {
+//    fields: { 'username': 1 }
+//  });
+//});
+
 Meteor.publishComposite('followingUserTweets', function(currentUsername) {  
   return {
     find: function() {
