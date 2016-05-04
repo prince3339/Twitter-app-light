@@ -31,14 +31,14 @@ Template.searchUser.events({
     return false;;
   },
   
-    'click #followUser': function(event) {
-        var followUserName = document.getElementById("getUserName").innerHTML;
-        if(followUserName == Meteor.user().username){
-          sAlert.error("You can't follow yourself.");
-        }else{
-          Meteor.call('followUserMethod', Session.get('search_result').username); 
-        }
-    },
+//    'click #followUser': function(event) {
+//        var followUserName = document.getElementById("getUserName").innerHTML;
+//        if(followUserName == Meteor.user().username){
+//          sAlert.error("You can't follow yourself.");
+//        }else{
+//          Meteor.call('followUserMethod', Session.get('search_result').username); 
+//        }
+//    },
  
     'click #cancelFollowingModalOpen': function() {
     
@@ -73,9 +73,13 @@ Template.searchUser.events({
         $.when($.ajax($('#open-following-modal').modal('hide'))).then(function () {
             setTimeout(function(){
               //Meteor.call('followUserMethod', Session.get('get_following_user').username);
-                Meteor.call('followUserMethod', followUserName);
-              console.log("Followed");
-            console.log(this.username)
+                if(followUserName == Meteor.user().username){
+                  sAlert.error("You can't follow yourself.");
+                }else{
+                  Meteor.call('followUserMethod', followUserName);
+                }   
+            console.log("Followed");
+            //console.log(this.username)
         }, 500);
       });
    },
@@ -118,7 +122,9 @@ Template.searchUser.helpers({
     
     'toggleFollowBtn': function(checkUser) {
 
-       var checkUser = userRelationship.find().fetch().filter(function(val){
+       var checkUser = userRelationship.find({
+           limit: 1
+       }).fetch().filter(function(val){
             return val.followingList == checkUser;
         });
       if(checkUser){
