@@ -101,21 +101,22 @@ Template.followerPeopleList.events({
   'click #openFollowingModalOpen': function() {
     
     $("#open-following-modal").modal({backdrop: 'static'});
-    //Session.set('get_following_user', this.followerList);
+    Session.set('get_following_user', this.followerList);
     console.log(this.followerList);
     console.log(this._id);
   },
 
   'click #followUser': function() {
-    var followUser = this.followerList
-    console.log(this._id);
-    console.log(followUser);
+    //var followUser = this.followerList
+    //console.log(this._id);
+    //console.log(followUser);
     //console.log(Session.get('get_following_user'));
 
       $.when($.ajax($('#open-following-modal').modal('hide'))).then(function () {
           setTimeout(function(){
             //Meteor.call('followUserMethod', Session.get('get_following_user').username);
-            Meteor.call('followUserMethod', followUser);
+            Meteor.call('followUserMethod', Session.get('get_following_user'));
+            console.log(Session.get('get_following_user'));
             console.log("Followed");
       }, 500);
     });
