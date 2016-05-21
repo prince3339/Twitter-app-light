@@ -28,7 +28,7 @@ Template.searchUser.events({
     
     Session.set('search_result', search_user_name);
     console.log(search_user_name);
-    return false;;
+    return false;
   },
   
 //    'click #followUser': function(event) {
@@ -43,15 +43,32 @@ Template.searchUser.events({
     'click #cancelFollowingModalOpen': function() {
     
         $("#cancel-following-modal").modal({backdrop: 'static'});
-        //console.log(this._id);
+        
+        Session.set('cancelFollowingName', this.username);
+        
+//        Meteor.call('searchUserById', function(err, res){
+//            if(res){
+//                Session.set('getCancelUserName', res);    
+//            }
+//        });
+        console.log(Session.get('cancelFollowingName'));
+        //console.log(Session.get('getCancelUserName'));
     },
   
     'click #cancelFollowing': function() {
-        var cancel_following_id = this._id;
+        //var cancelFollowingId = Session.get('cancelFollowingId');
+        //console.log(cancelFollowingId);
     
         $.when($.ajax($('#cancel-following-modal').modal('hide'))).then(function () {
             setTimeout(function(){
-              userRelationship.remove({"_id": cancel_following_id});
+              if(Meteor.user()){
+                  var myFollowingList = userRelationship.findOne({"followingList": Session.get('cancelFollowingName')});
+                  var cancelFollowingId = myFollowingList._id;
+                  console.log(myFollowingList._id);
+                  
+                  userRelationship.remove({"_id": myFollowingList._id});
+              }
+              //console.log(Session.get('getCancelUserName'));
               console.log("Unfollowed");
           }, 500);
         });
@@ -129,8 +146,7 @@ Template.searchUser.helpers({
         });
       if(checkUser){
         return checkUser;  
-      }else
-        return false;
+      }
 
       console.log(checkUser);
     }
