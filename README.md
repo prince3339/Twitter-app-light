@@ -1,2 +1,2 @@
 # teamLabTwitter
-Twitter like web application
+Twitter like web application using MeteorJs 1.2
